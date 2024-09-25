@@ -25,10 +25,6 @@ export default function App() {
       setData(tempData)
     }, [data])
 
-/*     const select = useCallback((id) => {
-      setSelectedId(id);
-    }, []); */
-
     const select = useCallback((id) => {
       const updateData = data.map(item =>
         item.id === id ? {...item, completed: !item.completed } : item
